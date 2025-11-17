@@ -1,7 +1,7 @@
 # Student Grade Analyzer
 
 A simple Python program that lets you add students, record their grades, and analyze class performance.
-This project runs in the terminal and is perfect for beginners practicing dictionaries, loops, and conditionals.
+This project runs in the terminal and if your also a beginner you can check and play with the code.
 
 ## Features
 - 📝 Add students with their grade  
