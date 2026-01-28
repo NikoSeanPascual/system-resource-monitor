@@ -1,21 +1,63 @@
-# Terminal-Based To-Do List
+# NSR Monitor (Niko’s System Resource Monitor)
 
-A simple Python terminal application to manage your daily tasks. This project allows you to **add, view, remove, and clear tasks** directly from the terminal.
+A modern **System Resource Monitor** built with **CustomTkinter** and **psutil**.  
+Designed with a terminal-inspired neon UI and real-time system statistics.
+
+---
 
 ## Features
 
-- Add a task to your to-do list
-- View all tasks in the list
-- Remove a specific task by number
-- Clear all tasks
-- Exit the program
+### 📊 Live Monitoring
+- **CPU usage** (percentage + core count)
+- **RAM usage** (used / total)
+- **Disk usage** (used / total)
 
-## How to Use
+### 📈 Real-Time Graphs
+- CPU usage history (neon green)
+- RAM usage history (dim green)
+- Smooth scrolling graph with configurable data points
 
-1. Clone the repository or download `to-do-list.py`.
-2. Open a terminal and navigate to the folder containing `to-do-list.py`.
-3. Run the program:
+### 🚨 Smart Alerts
+- Logs warnings when:
+  - CPU usage exceeds 85%
+  - RAM usage exceeds 85%
+  - Disk usage exceeds 90%
+- Timestamped alert logs
+
+### ⏸ Control Panel
+- Pause / Resume monitoring
+- Change update interval:
+  - 0.5s
+  - 1s
+  - 2s
+- Clear logs instantly
+
+### 🎨 UI & UX
+- Dark cyber-style theme
+- Progress bars with dynamic color changes
+- Fixedsys retro font aesthetic
+- Clean dashboard layout
+
+---
+
+## Libraries Used
+
+- `customtkinter` – modern UI framework
+- `psutil` – system resource access
+- `collections.deque` – efficient history storage
+- `datetime` – timestamped logs
+
+## How It Works (High-Level)
+
+1. Uses `psutil` to fetch system stats
+2. Updates UI on a timed loop (`after`)
+3. Stores history using fixed-size deques
+4. Draws graphs manually using `CTkCanvas`
+5. Triggers alerts when thresholds are exceeded
+
+---
+
+## Requirements
 
 ```bash
-python to-do-list.py
-****
+pip install customtkinter psutil
