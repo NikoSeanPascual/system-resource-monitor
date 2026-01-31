@@ -1,7 +1,7 @@
 # NSR Monitor (Niko’s System Resource Monitor)
 
 A modern **System Resource Monitor** built with **CustomTkinter** and **psutil**.  
-Designed with a terminal-inspired neon UI and real-time system statistics.
+Designed with a terminal-inspired neon UI and real-time system statistics.(I won't be updating this project anymore, you're free to use it and do whatever you want with it =))
 
 ---
 
